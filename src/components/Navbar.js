@@ -50,7 +50,7 @@ const Navbar = () => {
               alt="Gardener"
               className="rounded-circle garden-avatar"
             />
-            <span className="garden-user-name">Gardener</span>
+            <span className="garden-user-name">Ares</span>
           </DropdownToggle>
           <DropdownMenu right>
             <DropdownItem>
