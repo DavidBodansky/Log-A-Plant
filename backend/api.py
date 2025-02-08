@@ -30,4 +30,4 @@ class API:
     class Ask(Resource):
         def get(self):
             prompt = request.args.get("prompt", "good car company")
-            return Response.ok_custom(OpenAI.ask(prompt))
+            return Response.ok(OpenAI.ask(prompt))
