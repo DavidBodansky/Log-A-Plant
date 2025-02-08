@@ -37,6 +37,7 @@ class User:
                 logs
             WHERE
                 user_id = %s
+            ORDER BY date_created DESC
         """, (self.id,))
         
         logs: List[models.Log] = []
@@ -58,6 +59,7 @@ class User:
                 categories
             WHERE
                 user_id = %s
+            ORDER BY date_created DESC
         """, (self.id,))
         
         categories: List[models.Category] = []
