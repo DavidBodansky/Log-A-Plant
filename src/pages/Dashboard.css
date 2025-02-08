@@ -23,11 +23,6 @@ html, body {
     font-family: 'Frenstyle', sans-serif;
   }
   
-.garden-navbar {
-    background-color: #4CAF50; /* A natural green color */
-    padding: 1rem;
-    border-radius: 8px;
-  }
   
   /* Leaf icon on the left */
   .sidebar-toggler {
@@ -52,12 +47,7 @@ html, body {
     display: flex;
     align-items: center;
     cursor: pointer;
-  }
-  
-  .garden-avatar {
-    width: 30px;
-    height: 30px;
-    margin-right: 0.5rem;
+    padding: 0 !important;
   }
   
   .garden-user-name {
@@ -131,14 +121,16 @@ html, body {
     top: 200px;
     right: 200px;
     z-index: 50;
+    transform: rotate(2deg);
   }
 
   .tip-icon {
     position: absolute;
+    transform: rotate(5deg);
     top: -30px; /* Move it near the top */
-    right: -15px; /* Move it near the right side */
-    width: 70px; /* Size of the icon */
-    height: 70px; /* Size of the icon */
+    right: -20px; /* Move it near the right side */
+    width: 75px; /* Size of the icon */
+    height: 75px; /* Size of the icon */
   }
   
   .garden-tip-box h3 {

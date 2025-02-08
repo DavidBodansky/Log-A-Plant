@@ -17,7 +17,10 @@ function App() {
           we do NOT include the Navbar from App.js 
           because Dashboard.js already has its own navbar. 
         */}
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<>
+          <Navbar />
+          <Dashboard />
+        </>} />
 
         {/* 
           For all other routes, 

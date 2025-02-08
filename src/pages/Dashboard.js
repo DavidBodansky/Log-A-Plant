@@ -57,53 +57,6 @@ const Dashboard = () => {
 
   return (
     <div>
-      {/* Navbar at the top, styled as a green rectangle */}
-      <Navbar className="garden-navbar" expand="md">
-        {/* Left side: Leaf icon + main nav links */}
-        <Nav className="mr-auto" navbar>
-          <NavItem className="sidebar-toggler" onClick={() => { /* Optional sidebar toggle */ }}>
-            <i className="fa fa-leaf fa-2x text-white" />
-          </NavItem>
-          <NavItem>
-            <Link className="garden-nav-link" to="/">Dashboard</Link>
-          </NavItem>
-          <NavItem>
-            <Link className="garden-nav-link" to="/daily-log">Daily Log</Link>
-          </NavItem>
-          <NavItem>
-            <Link className="garden-nav-link" to="/ai-chat">Gardening Q&A</Link>
-          </NavItem>
-          <NavItem>
-            <Link className="garden-nav-link" to="/recipes">Recipes</Link>
-          </NavItem>
-        </Nav>
-
-        {/* Right side: Profile dropdown */}
-        <Nav className="ml-auto" navbar>
-          <Dropdown nav isOpen={dropdownOpen} toggle={toggleDropdown}>
-            <DropdownToggle nav caret className="garden-user">
-              <img 
-                src={pfpImage}
-                alt="Gardener" 
-                className="rounded-circle garden-avatar" 
-              />
-              <span className="garden-user-name">Ares</span>
-            </DropdownToggle>
-            <DropdownMenu right>
-              <DropdownItem>
-                <NavLink to="/profile" className="garden-dropdown-link">Profile</NavLink>
-              </DropdownItem>
-              <DropdownItem>
-                <NavLink to="/settings" className="garden-dropdown-link">Settings</NavLink>
-              </DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem onClick={handleLogout}>
-                Logout
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </Nav>
-      </Navbar>
 
       {/* Main dashboard content below the navbar */}
       <Container className="garden-dashboard-content mt-4">
