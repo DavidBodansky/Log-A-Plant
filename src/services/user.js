@@ -1,4 +1,4 @@
 const getUserID = () => {
-  return localStorage.getItem("user_id")
+  return "1"
 }
 export { getUserID };

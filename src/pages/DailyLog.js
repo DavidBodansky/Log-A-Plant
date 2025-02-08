@@ -146,6 +146,7 @@ const DailyLog = () => {
               <option value="First Growth">First Growth</option>
               <option value="Flowering">Flowering</option>
               <option value="Harvest">Harvest</option>
+              <option value="Vlogging">Just Vlogging!</option>
             </select>
           </div>
 
