@@ -46,11 +46,14 @@ class API:
             caption = request.form.get('caption')
             if caption is None:
                 return Response.bad_request("This endpoint expects a caption!")
+            plant = request.form.get('plant')
+            if plant is None:
+                return Response.bad_request("This endpoint expects a plant!")
             stage = request.form.get('stage')
             conn = DB()
             try:
                 image = request.files.get('image')
-                return Response.ok(utility.createLog(image, caption, stage, user_id, conn))
+                return Response.ok(utility.createLog(image, caption, stage, plant, user_id, conn))
             except Exception as e:
                 conn.close()
                 raise e
@@ -60,6 +63,16 @@ class API:
             try:
                 logs = db.User(conn, user_id).get_model_logs()
                 return Response.ok(logs)
+            except Exception as e:
+                conn.close()
+                raise e
+    class GetRecipes(Resource):
+        def get(self, user_id: int):
+            conn = DB()
+            try:
+                # logs = db.User(conn, user_id).get_logs_logs()
+                # return Response.ok(logs)
+                return Response.ok("")
             except Exception as e:
                 conn.close()
                 raise e

@@ -5,7 +5,7 @@ from config import Config
 import uuid
 from typing import Union
 
-def createLog(image: Union[FileStorage, None], caption: str, stage: Union[str, None], user_id: int, conn: DB):
+def createLog(image: Union[FileStorage, None], caption: str, stage: Union[str, None], plant: str, user_id: int, conn: DB):
     image_url = None
     image_uuid = None
     if image is not None:
@@ -25,10 +25,10 @@ def createLog(image: Union[FileStorage, None], caption: str, stage: Union[str, N
     created_id = conn.insert("""
         INSERT INTO
             logs
-        (user_id, caption, stage, image_url, stage)
+        (user_id, caption, stage, image_url, plant)
         VALUES 
         (%s, %s, %s, %s, %s)
-    """, (user_id, caption, stage, image_url, None))
+    """, (user_id, caption, stage, image_url, plant))
     if created_id is None:
         raise RuntimeError("inserting category in utility.createCategory didn't return a created row id")
     return created_id

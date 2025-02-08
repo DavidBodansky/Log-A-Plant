@@ -24,6 +24,7 @@ class Log():
     id: int
     user_id: int
     caption: str
+    plant: str
     image_url: Union[str, None]
     stage: Union[str, None]
     date_created: datetime

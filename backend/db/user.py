@@ -32,7 +32,7 @@ class User:
     def get_model_logs(self):
         rows = self.db.read("""
             SELECT
-                id, user_id, caption, image_url, stage, date_created
+                id, user_id, caption, image_url, stage, plant, date_created
             FROM
                 logs
             WHERE
@@ -46,6 +46,7 @@ class User:
                 id = int(row['id']),
                 user_id = int(row['user_id']),
                 caption = row['caption'],
+                plant = row['plant'],
                 image_url = row['image_url'],
                 stage = row['stage'],
                 date_created = row['date_created'].strftime("%Y-%m-%dT%H:%M:%SZ")
