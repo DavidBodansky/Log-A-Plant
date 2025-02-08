@@ -18,6 +18,12 @@
     While this step is not required, it is recomended for lower dependency conflicts.
     
 4. Install the required packages:
+    If you are not already in the backend directory, cd into the backend folder:
+    ```sh
+    backend
+    ```
+    
+    When its ensured that you're within the backend directory, install the requirements.txt file using the following command: 
     ```sh
     pip install -r requirements.txt
     ```
@@ -45,7 +51,7 @@ After doing so you may run npm start to start the local web application
 npm start
 ```
 
-You can find the endpoints at [Endpoints](#endpoints)
+
 
 ## Endpoints
 
