@@ -41,3 +41,24 @@ class API:
         def get(self):
             prompt = request.args.get("prompt", "good car company")
             return Response.ok(OpenAI.ask(prompt))
+    class NewLog(Resource):
+        def post(self, user_id: int):
+            caption = request.form.get('caption')
+            if caption is None:
+                return Response.bad_request("This endpoint expects a caption!")
+            conn = DB()
+            try:
+                image = request.files.get('image')
+                return Response.ok(utility.createLog(image, caption, user_id, conn))
+            except Exception as e:
+                conn.close()
+                raise e
+    class GetLogs(Resource):
+        def get(self, user_id: int):
+            conn = DB()
+            try:
+                logs = db.User(conn, user_id).get_model_logs()
+                return Response.ok(logs)
+            except Exception as e:
+                conn.close()
+                raise e

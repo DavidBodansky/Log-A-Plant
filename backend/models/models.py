@@ -18,3 +18,11 @@ class Capture():
     produce_id: int
     caption: str
     date_created: datetime
+@dataclass
+class Log():
+    id: int
+    user_id: int
+    caption: str
+    image_url: str | None
+    stage: str | None
+    date_created: datetime

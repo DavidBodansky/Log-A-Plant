@@ -29,6 +29,27 @@ class User:
             categories.append(Category(row['id'], self.db))
         return categories
 
+    def get_model_logs(self):
+        rows = self.db.read("""
+            SELECT
+                id, user_id, caption, image_url, stage, date_created
+            FROM
+                logs
+            WHERE
+                user_id = %s
+        """, (self.id,))
+        
+        logs: List[models.Log] = []
+        for row in rows:
+            logs.append(models.Log(
+                id = int(row['id']),
+                user_id = int(row['user_id']),
+                caption = row['caption'],
+                image_url = row['image_url'],
+                stage = row['stage'],
+                date_created = row['date_created'].strftime("%Y-%m-%dT%H:%M:%SZ")
+            ))
+        return logs
     def get_model_categories(self):
         rows = self.db.read("""
             SELECT

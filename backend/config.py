@@ -14,4 +14,7 @@ class Config:
     DB_USER = os.getenv("DB_USER")
     DB_PASS = os.getenv("DB_PASS")
     DB_SCHEMA = os.getenv("DB_SCHEMA")
+    AWS_KEY = os.getenv("AWS_KEY")
+    AWS_SECRET = os.getenv("AWS_SECRET")
+    AWS_REGION = os.getenv("AWS_REGION")
 
