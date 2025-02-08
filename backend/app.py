@@ -10,6 +10,7 @@ api = Api(app)
 
 # Server Routing
 api.add_resource(API.Test, '/test_connection')
+api.add_resource(API.Ask, '/ask')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=Config.PORT, debug=Config.DEVELOPMENT)
