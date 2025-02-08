@@ -1,0 +1,19 @@
+# allowed domain origins
+ALLOWED_ORIGINS=""
+
+# open ai config
+SECRET_KEY=""
+OPENAI_API_KEY=""
+
+# 1 for development, 0 for production
+DEVELOPMENT=""
+
+# port of server
+PORT=""
+
+# db config
+DB_HOST=""
+DB_USER=""
+DB_PASS=""
+DB_SCHEMA=""
+
