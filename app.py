@@ -11,5 +11,5 @@ app.config.from_object(config.Config)
 app.register_blueprint(api_blueprint, url_prefix='/api')
 
 if __name__ == '__main__':
-    port = app.config.get("PORT", 5000)
+    port = app.config.get("PORT")
     app.run(host='0.0.0.0', port=port, debug=True)

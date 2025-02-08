@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from controllers.plant_controller import create_log
+from backend.controllers.plant_controller import create_log
 
 api_blueprint = Blueprint('api', __name__)
 
