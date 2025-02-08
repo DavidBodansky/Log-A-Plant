@@ -117,6 +117,7 @@ html, body {
     - Overlaid transparent box with shadow 
   */
   .garden-tip-box {
+    display: block;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 2rem;
     border-radius: 15px;
@@ -149,4 +150,49 @@ html, body {
     font-size: 16px;
     line-height: 1.6;
   }
-  
+
+@keyframes gradientRotate {
+  0% { background-position: 50% 0%; }
+  50% { background-position: 100% 0%; }
+  100% { background-position: 0% 0%; }
+}
+.ai-chat-link {
+  margin-top: 35px;
+  margin-left: 25px;
+  display: block;
+  position: relative;
+  padding: 12px 24px;
+  font-size: 18px;
+  line-height: 26px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  background: linear-gradient(40deg, #4169E1, #9370DB, #FF69B4);
+  color: white;
+  width: 175px;
+  height: 50px;
+  text-align: center;
+  transition: transform 0.2s;
+  background-size: 200% 100%;
+  background-position: 50% 0%;
+
+  &:hover {
+    transform: scale(1.05);
+    animation: gradientRotate 2s ease infinite;
+
+    .ai-spark {
+      transform: rotate(7deg) scale(1.15);
+    }
+  }
+
+  .ai-spark {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 45px;
+    aspect-ratio: 1;
+    transition: transform .2s ease, width .2s ease;
+    transform: rotate(3deg);
+  }
+}
