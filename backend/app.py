@@ -5,11 +5,13 @@ from config import Config
 from api import API
 
 app = Flask(__name__)
-CORS(app, origins=Config.ALLOWED_ORIGINS)  # Enable Cross-Origin Resource Sharing
+CORS(app)
 api = Api(app)
 
 # Server Routing
 api.add_resource(API.Test, '/test_connection')
+api.add_resource(API.NewCategory, '/user/<int:user_id>/new/category/<string:produce>')
+api.add_resource(API.GetCategory, '/user/<int:user_id>/get/category/<int:category_id>')
 api.add_resource(API.Ask, '/ask')
 
 if __name__ == '__main__':
