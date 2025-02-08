@@ -56,3 +56,38 @@ npm start
 ## Endpoints
 
 - `/` - Main menu
+
+
+
+## .env dependency
+
+Our program uses a group of API's that are dependent on private keys.
+
+We rely on private keys that are gathered and inputted into the .env file within the backend directory.
+The .env file structure is as follows :
+
+ALLOWED_ORIGINS=""
+
+SECRET_KEY=""
+OPENAI_API_KEY=""
+
+DEVELOPMENT=""
+
+PORT=""
+
+DB_HOST=""
+DB_USER=""
+DB_PASS=""
+DB_SCHEMA=""
+
+AWS_KEY=""
+AWS_SECRET=""
+AWS_REGION=""
+
+UNSPLASH_ACCESS=""
+UNSPLASH_KEY=""
+
+SPOONACULAR_ACCESS=""
+
+You must develop the cooresponding API keys for OpenAI, AWS RDS and SPOONIFY
+
