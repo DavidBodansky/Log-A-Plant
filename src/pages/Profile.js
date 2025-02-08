@@ -38,7 +38,7 @@ const Profile = () => {
             <h1>Ares</h1>
           </div>
           <p className="with-us">
-            User created two days ago
+            User created two months ago!
           </p>
         </div>
       </div>
