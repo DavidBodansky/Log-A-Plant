@@ -81,11 +81,11 @@ html, body {
 
   .welcome-paragraph {
     position: absolute;
-    top: 350px;    /* slightly below the heading’s top: 250px */
-    left: 276px;   /* place it further to the left than the heading */
-    width: 400px;  /* optional: fix a width */
+    top: 400px;    /* slightly below the heading’s top: 250px */
+    left: 310px;   /* place it further to the left than the heading */
+    width: 500px;  /* optional: fix a width */
     color: white;  /* ensure it's visible against the background */
-    line-height: 1.6;
+    line-height: 2.25;
   }
   
   /* Title & subheading styling */
@@ -118,8 +118,8 @@ html, body {
        The old snippet had absolute positioning (top & right).
        Adjust these to place it as desired. */
     position: absolute;
-    top: 200px;
-    right: 200px;
+    top: 175px;
+    right: 175px;
     z-index: 50;
     transform: rotate(2deg);
   }
@@ -149,21 +149,21 @@ html, body {
   100% { background-position: 0% 0%; }
 }
 .ai-chat-link {
-  margin-top: 35px;
-  margin-left: 25px;
+  margin-top: -130px;
+  margin-left: 650px;
   display: block;
   position: relative;
-  padding: 12px 24px;
-  font-size: 18px;
-  line-height: 26px;
+  padding: 18px 36px;  /* Increased padding */
+  font-size: 27px;     /* Increased font size */
+  line-height: 39px;   /* Adjusted line-height to match font size */
   border: none;
-  border-radius: 25px;
+  border-radius: 50px;
   cursor: pointer;
   text-decoration: none;
   background: linear-gradient(40deg, #4169E1, #9370DB, #FF69B4);
   color: white;
-  width: 175px;
-  height: 50px;
+  width: 262.5px;      /* 175px * 1.5 */
+  height: 75px;        /* 50px * 1.5 */
   text-align: center;
   transition: transform 0.2s;
   background-size: 200% 100%;
