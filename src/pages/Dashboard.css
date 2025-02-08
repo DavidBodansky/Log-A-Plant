@@ -88,6 +88,15 @@ html, body {
     flex-direction: column;
     justify-content: center;
   }
+
+  .welcome-paragraph {
+    position: absolute;
+    top: 350px;    /* slightly below the heading’s top: 250px */
+    left: 276px;   /* place it further to the left than the heading */
+    width: 400px;  /* optional: fix a width */
+    color: white;  /* ensure it's visible against the background */
+    line-height: 1.6;
+  }
   
   /* Title & subheading styling */
   .garden-heading {
