@@ -1,4 +1,7 @@
 from db import DB
+from db.category import Category
+from typing import List
+import models
 
 class User:
     def __init__(self, db: DB, id: int):
@@ -18,5 +21,27 @@ class User:
             FROM
                 categories
             WHERE
-                user_id = ?
+                user_id = %s
         """, (self.id,))
+        
+        categories: List[Category] = []
+        for row in rows:
+            categories.append(Category(row['id'], self.db))
+        return categories
+
+    def get(self) -> models.User:
+        rows = self.db.read("""
+            SELECT
+                id, username
+            FROM
+                users
+            WHERE
+                id = %s
+        """, (self.id,))
+        if len(rows) == 0:
+            raise RuntimeError(f"We could not find a user from the user id ({self.id})")
+        row = rows[0]
+        return models.User(
+            id = int(row['id']),
+            username = row['username']
+        )
