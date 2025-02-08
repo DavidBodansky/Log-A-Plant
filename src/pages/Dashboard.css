@@ -83,8 +83,26 @@
   }
   
   .garden-tip-box {
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 1.5rem;
-    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.85); /* Light background with slight transparency */
+    padding: 2rem; /* Increased padding for a larger box */
+    border-radius: 15px; /* Rounded edges */
+    width: 300px; /* Slightly wider box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+    position: absolute;
+    top: 200px; /* Position closer to the center */
+    right: 200px; /* Position closer to the center */
+    z-index: 50; /* Ensure it's above other content */
+}
+
+  .garden-tip-box h3 {
+      font-size: 22px; /* Larger font size for the title */
+      margin-bottom: 15px; /* Increase space below the heading */
   }
+
+  .garden-tip-box p {
+      font-size: 16px; /* Larger font size for the text */
+      line-height: 1.6; /* Slightly increased line height for readability */
+  }
+
+
   

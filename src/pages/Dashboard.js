@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Container, 
   Navbar, 
   Nav, 
   NavItem, 
-  Button, 
   Dropdown, 
   DropdownToggle, 
   DropdownMenu, 
@@ -15,21 +14,41 @@ import './Dashboard.css';
 
 const Dashboard = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [gardeningTip, setGardeningTip] = useState('');
+
+  // List of 20 gardening tips
+  const gardeningTips = [
+    "Water your plants early in the morning for optimal absorption and healthy growth!",
+    "Ensure your plants receive enough sunlight based on their specific needs.",
+    "Use organic compost to improve soil health and boost plant growth.",
+    "Prune dead or diseased branches regularly to encourage new growth.",
+    "Mulch around your plants to retain moisture and prevent weed growth.",
+    "Rotate your crops every year to avoid soil depletion and pests.",
+    "Plant herbs like basil, mint, and rosemary to enhance flavor and fragrance.",
+    "Ensure good drainage for potted plants to avoid root rot.",
+    "Use rainwater for your plants whenever possible to conserve water.",
+    "Keep an eye out for pests and act quickly to prevent damage.",
+    "Add nitrogen-rich fertilizer to your plants for lush, green foliage.",
+    "Keep your garden tools clean and sharpened for efficient work.",
+    "Harvest crops when they are fully ripe for the best taste and nutrition.",
+    "Learn about the native plants in your area and incorporate them into your garden.",
+    "Grow companion plants that help each other thrive and protect from pests.",
+    "Incorporate flowers into your garden to attract pollinators like bees and butterflies.",
+    "Be patient with plant growth; gardening takes time and care.",
+    "Water deeply and less frequently to encourage strong root systems.",
+    "Test your soil regularly to ensure the right pH and nutrient levels for your plants.",
+    "Consider growing drought-tolerant plants to save water in the garden."
+  ];
+
+  // Randomly select a gardening tip
+  useEffect(() => {
+    const randomTip = gardeningTips[Math.floor(Math.random() * gardeningTips.length)];
+    setGardeningTip(randomTip);
+  }, []); // The empty dependency array ensures this runs once when the component mounts
+
   const toggleDropdown = () => setDropdownOpen(prevState => !prevState);
 
-  // Static gardening tip
-  const gardeningTip = "Water your plants early in the morning for optimal absorption and healthy growth!";
-
   // Event Handlers
-  const handleNewEntry = () => {
-    // For example, navigate to a new entry form or open a modal
-    console.log("New Entry button clicked");
-  };
-
-  const handlePlantInfo = () => {
-    console.log("Plant Info button clicked");
-  };
-
   const handleLogout = () => {
     console.log("Logout clicked");
     // You can add logout logic here (e.g., clearing tokens, redirecting, etc.)
@@ -46,24 +65,6 @@ const Dashboard = () => {
           {/* Removed search field */}
         </Nav>
         <Nav className="ml-auto" navbar>
-          <NavItem className="mx-2">
-            <Button 
-              color="success" 
-              className="garden-btn" 
-              onClick={handleNewEntry}
-            >
-              <i className="fa fa-plus" /> New Entry
-            </Button>
-          </NavItem>
-          <NavItem className="mx-2">
-            <Button 
-              color="warning" 
-              className="garden-btn" 
-              onClick={handlePlantInfo}
-            >
-              <i className="fa fa-tree" /> Plant Info
-            </Button>
-          </NavItem>
           <Dropdown nav isOpen={dropdownOpen} toggle={toggleDropdown}>
             <DropdownToggle nav caret className="garden-user">
               <img 
