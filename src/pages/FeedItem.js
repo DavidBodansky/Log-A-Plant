@@ -34,7 +34,7 @@ const FeedItem = (log) => {
   return (
     <div class="feed-item">
       <div class="text">
-        <p class="created-on">{formatDate(log.date_created)}</p>
+        <p><span class="created-on">{formatDate(log.date_created)}</span> - <span>{log.plant}</span></p>
         <p class="caption">{log.caption}</p>
       </div>
       {log.image_url && (

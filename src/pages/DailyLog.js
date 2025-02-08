@@ -7,6 +7,7 @@ import { getUserID } from '../services/user';
 const DailyLog = () => {
   const [log, setLog] = useState({
     notes: '',
+    plant: '',
     stage: 'Initial Seeding',
     date: new Date().toISOString().split('T')[0],
   });
@@ -80,6 +81,7 @@ const DailyLog = () => {
       const formData = new FormData();
       formData.append('caption', log.notes);
       formData.append('stage', log.stage);
+      formData.append('plant', log.plant);
       if (image) {
         formData.append('image', image);
       }
@@ -109,6 +111,17 @@ const DailyLog = () => {
     <Container className="garden-dashboard-content mt-4">
       <div className="daily-log-box">
         <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>Plant Name:</label>
+            <input 
+              name="plant"
+              value={log.plant}
+              onChange={handleChange}
+              placeholder="Tomato"
+              rows="4"
+              className="daily-log-input"
+            />
+          </div>
           <div className="form-group">
             <label>Notes:</label>
             <textarea 

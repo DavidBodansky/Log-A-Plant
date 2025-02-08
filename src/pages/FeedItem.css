@@ -13,8 +13,7 @@
     width: 100%;
     box-sizing: border-box;
     margin-left: 5%;
-  }
-  .created-on {
+    color: #c9c9c9;
     font-size: 18px;
     color: #c9c9c9;
   }
