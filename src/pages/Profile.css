@@ -3,7 +3,7 @@
     background-size: cover;
     padding: 2rem;
     border-radius: 8px;
-    color: #333;
+    color: #000000;
     min-height: 80vh;
   }
 .user-info {
@@ -43,7 +43,7 @@
       margin-top: 20px;
       margin-left: 5px;
       font-size: 16px;
-      color: #303030;
+      color: #ffffff;
     }
   }
 }

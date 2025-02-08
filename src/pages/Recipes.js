@@ -20,7 +20,7 @@ const Recipes = () => {
 
   return (
     <Container className="garden-dashboard-content mt-4">
-      <h1 className="garden-heading">Recipe Suggestions</h1>
+      <h1 className="ai-chat-heading">Recipe Suggestions</h1>
       <div className="recipes-box">
         {recipes.length > 0 ? (
           <ul className="recipes-list">

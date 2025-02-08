@@ -4,6 +4,15 @@
   GREEN NAVBAR 
   (Retained from the new snippet)
 */
+html, body {
+  margin: 0;
+  padding: 0;
+  /* 2) Set a background color so the entire page 
+        (outside the .garden-navbar or .garden-dashboard-content) 
+        is no longer white. Adjust to your chosen color. */
+  background-color: #2e2e2e; /* Example: dark gray or any other color */
+}
+
 @font-face {
     font-family: 'Frenstyle';
     src: url('fonts/Frenstyle.otf') format('opentype');
@@ -87,8 +96,8 @@
     position: absolute;
     top: 250px;
     left: 275px;
-    color: white; /* Ensures visibility on background */
-    -webkit-text-stroke: 0.1rem rgb(255, 255, 255); /* Adds a black stroke around the text */
+    color: white;
+    -webkit-text-stroke: 0.1rem rgb(255, 255, 255); 
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 
     font-family: 'Frenstyle', sans-serif;
