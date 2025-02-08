@@ -10,7 +10,7 @@ class DB:
             password = Config.DB_PASS,
             database = Config.DB_SCHEMA
         )
-    def insert(self, query: str, args: Tuple = (), lastrowid=True) -> Any:
+    def insert(self, query: str, args: Tuple = (), lastrowid=True):
         """
         Executes a query and returns the result.
         
@@ -34,7 +34,7 @@ class DB:
         
         return result
 
-    def read(self, query: str, args: Tuple = ()) -> Any:
+    def read(self, query: str, args: Tuple = ()):
         """
         Executes a query and returns the result.
         
@@ -55,3 +55,4 @@ class DB:
             
         cursor.close()
         return result
+
