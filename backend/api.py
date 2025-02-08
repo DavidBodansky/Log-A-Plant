@@ -70,9 +70,9 @@ class API:
         def get(self, user_id: int):
             conn = DB()
             try:
-                # logs = db.User(conn, user_id).get_logs_logs()
-                # return Response.ok(logs)
-                return Response.ok("")
+                plants = db.User(conn, user_id).get_model_plants()
             except Exception as e:
                 conn.close()
                 raise e
+            conn.close()
+            return Response.ok(OpenAI.recipe_reqs(plants))

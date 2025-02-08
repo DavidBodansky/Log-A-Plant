@@ -29,6 +29,23 @@ class User:
             categories.append(Category(row['id'], self.db))
         return categories
 
+    def get_model_plants(self) -> List[str]:
+        rows = self.db.read("""
+            SELECT
+                plant
+            FROM
+                logs
+            WHERE
+                user_id = %s
+                AND plant IS NOT NULL
+            GROUP BY plant
+            ORDER BY date_created DESC
+        """, (self.id,))
+        
+        plants = []
+        for row in rows:
+            plants.append(row['plant'])
+        return plants
     def get_model_logs(self):
         rows = self.db.read("""
             SELECT
