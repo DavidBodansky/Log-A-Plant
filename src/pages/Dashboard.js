@@ -111,10 +111,10 @@ const Dashboard = () => {
         <div className="welcome-text">
           <h1 className="garden-heading">Welcome, Ares</h1>
           <p className="welcome-paragraph">
-            We're thrilled you're tending to your garden here. 
-            Log plant progress and learn about sustainable enviromental practices!
-            Feel free to explore recipes, chat with the AI for helpful advice, and
-            interact with others helping the enviroment as well. Happy gardening!
+          We're thrilled you're tending to your garden here. 
+          Log plant progress and learn about sustainable environmental practices! 
+          Feel free to explore recipes, chat with the AI for helpful advice, and interact with others helping the environment as well. 
+          Happy gardening!
           <Link className="ai-chat-link" to="/ai-chat"><span>Ask AI</span><img className="ai-spark" src={require("../images/ai-spark.png")}/></Link>
           </p>
         </div>
