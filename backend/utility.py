@@ -5,7 +5,7 @@ from config import Config
 import uuid
 from typing import Union
 
-def createLog(image: Union[FileStorage, None], caption: str, stage: str | None, user_id: int, conn: DB):
+def createLog(image: Union[FileStorage, None], caption: str, stage: Union[str, None], user_id: int, conn: DB):
     image_url = None
     image_uuid = None
     if image is not None:
