@@ -6,7 +6,6 @@ import DailyLog from './pages/DailyLog';
 import AIChat from './pages/AIChat';
 import Recipes from './pages/Recipes';
 import Profile from './pages/Profile';
-import Milestones from './pages/Milestones';
 import Navbar from './components/Navbar';
 
 function App() {
