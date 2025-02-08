@@ -1,14 +1,13 @@
 /* AIChat.css */
 @font-face {
-    font-family: 'Frenstyle';
-    src: url('fonts/Frenstyle.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  body {
-    font-family: 'Frenstyle', sans-serif;
-  }
-
+  font-family: 'Frenstyle';
+  src: url('fonts/Frenstyle.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'Frenstyle', sans-serif;
+}
 
 .garden-dashboard-content {
   background: url('../images/garden_background.jpg') no-repeat center center;
@@ -21,24 +20,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for resizing */
+}
+
+.garden-dashboard-content.resized {
+  transform: scale(1.05); /* Increase the scale of the container */
 }
 
 .ai-chat-heading {
-    position: absolute;
-    /* Place it wherever you want */
-    top: 142px;        /* Move it farther up or down */
-    left: 50%;        /* Center it horizontally */
-    transform: translateX(-50%); /* Adjust to center around the midpoint */
-    
-    font-size: 5rem;
-    margin: 0;        /* Remove default margins */
-    text-align: center;
-    z-index: 2;       /* Ensure it appears above the background if needed */
-    color: white; /* Ensures visibility on background */
-    -webkit-text-stroke: 0.1rem rgb(255, 255, 255); /* Adds a black stroke around the text */
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-
-    font-family: 'Frenstyle', sans-serif;
+  position: absolute;
+  top: 142px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 5rem;
+  margin: 0;
+  text-align: center;
+  z-index: 2;
+  color: white;
+  -webkit-text-stroke: 0.1rem rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  font-family: 'Frenstyle', sans-serif;
+  transition: opacity 0.3s ease; /* Smooth transition for title visibility */
 }
 
 .ai-chat-box {
@@ -47,6 +49,15 @@
   border-radius: 6px;
   max-width: 800px;
   width: 100%;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for moving */
+}
+
+.ai-chat-box.moved {
+  transform: translateY(-70%); /* Move the textbox up by 70% */
+}
+
+.ai-chat-box.resized {
+  max-width: 90%; /* Adjust the width when resized */
 }
 
 .form-label {
