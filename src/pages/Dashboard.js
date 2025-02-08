@@ -64,9 +64,10 @@ const Dashboard = () => {
         <div className="welcome-text">
           <h1 className="garden-heading">Welcome, Ares</h1>
           <p className="welcome-paragraph">
-          We're thrilled you're tending to your garden here. 
-          Log plant progress and learn about sustainable environmental practices! 
-          Feel free to explore recipes, chat with the AI for helpful advice, and interact with others helping the environment as well. 
+          We're thrilled you're tending to your garden here!
+          Log plant progress and learn about sustainable environmental practices.
+          Feel free to explore recipes after you've harvested your fully grown crops!
+          If you have questions about soil conditions, watering schedules, or planting seasons? Our AI chatbot is here to offer expert guidance, whether you're a beginner or a seasoned gardener. 
           Happy gardening!
           <Link className="ai-chat-link" to="/ai-chat"><span>Ask AI</span><img className="ai-spark" src={require("../images/ai-spark.png")}/></Link>
           </p>
