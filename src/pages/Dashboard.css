@@ -180,9 +180,9 @@ html, body {
 
   .ai-spark {
     position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 45px;
+    top: -25px;
+    right: -15px;
+    width: 65px;
     aspect-ratio: 1;
     transition: transform .2s ease, width .2s ease;
     transform: rotate(3deg);

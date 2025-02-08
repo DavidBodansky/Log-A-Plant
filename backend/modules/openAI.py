@@ -3,6 +3,7 @@ from modules.spoonacular import Spoonacular
 from config import Config
 from typing import List
 import json
+import time
 import markdown
 
 class OpenAI:
@@ -26,6 +27,7 @@ class OpenAI:
         ENSURE ALL IMAGE URLS ARE FROM PUBLICLY ACCESSIBLE SOURCES AND ARE RELEVANT TO THE RECIPE.
         Here is the list of plants: ''' + ", ".join(plants)
         # Initialize OpenAI client
+        time.sleep(3)
         return json.loads('''[
   {
     "estimated_cook_time": 15,
