@@ -34,7 +34,7 @@ const AIChat = () => {
 
   return (
     <Container className="garden-dashboard-content mt-4">
-      <h1 className="garden-heading">Gardening Q&A</h1>
+      <h1 className="ai-chat-heading">Gardening Q&A</h1>
       <div className="ai-chat-box">
         <form onSubmit={handleSubmit}>
           <label className="form-label">Ask your gardening question:</label>
