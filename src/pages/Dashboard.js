@@ -76,9 +76,6 @@ const Dashboard = () => {
           <NavItem>
             <Link className="garden-nav-link" to="/recipes">Recipes</Link>
           </NavItem>
-          <NavItem>
-            <Link className="garden-nav-link" to="/milestones">Milestones</Link>
-          </NavItem>
         </Nav>
 
         {/* Right side: Profile dropdown */}
