@@ -1,11 +1,6 @@
 import mysql.connector
-from typing import  Any, Tuple
-from dotenv import  load_dotenv
-import os
+from typing import Any, Tuple
 from config import Config
-
-
-load_dotenv()
 
 class DB:
     def __init__(self):
