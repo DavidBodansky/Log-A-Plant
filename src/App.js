@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className="container" style={{ padding: '20px' }}>
+      <div  style={{ padding: '20px' }}>
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/daily-log" element={<DailyLog />} />

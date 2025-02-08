@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import pfpImage from '../images/pfp.png';
 import { 
   Container, 
   Navbar, 
@@ -68,7 +69,7 @@ const Dashboard = () => {
           <Dropdown nav isOpen={dropdownOpen} toggle={toggleDropdown}>
             <DropdownToggle nav caret className="garden-user">
               <img 
-                src="/images/garden_avatar.jpg" 
+                src={pfpImage}
                 alt="Gardener" 
                 className="rounded-circle garden-avatar" 
               />
