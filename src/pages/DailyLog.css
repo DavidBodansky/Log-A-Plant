@@ -1,0 +1,68 @@
+/* DailyLog.css */
+
+.garden-dashboard-content {
+    background: url('../images/garden_background.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 2rem;
+    border-radius: 8px;
+    color: #333;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .garden-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .daily-log-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 1.5rem;
+    border-radius: 6px;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .daily-log-textarea {
+    width: 100%;
+    border-radius: 4px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    resize: vertical;
+  }
+  
+  .daily-log-select,
+  .daily-log-date {
+    width: 100%;
+    border-radius: 4px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    margin-top: 0.5rem;
+  }
+  
+  .daily-log-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .daily-log-button:hover {
+    background-color: #45a049;
+  }
+  
+  .response-message {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  

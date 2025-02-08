@@ -1,6 +1,7 @@
-// src/pages/AIChat.js
 import React, { useState } from 'react';
 import api from '../services/api';
+import { Container } from 'reactstrap';
+import './AIChat.css';
 
 const AIChat = () => {
   const [question, setQuestion] = useState('');
@@ -9,7 +10,6 @@ const AIChat = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Call your Flask endpoint for AI Q&A. Adjust the endpoint as necessary.
       const res = await api.post('/ai/qa', { question });
       setChatResponse(res.data.answer || 'No answer received.');
       setQuestion('');
@@ -20,29 +20,29 @@ const AIChat = () => {
   };
 
   return (
-    <div>
-      <h1>Gardening Q&A</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Ask your gardening question:</label><br />
+    <Container className="garden-dashboard-content mt-4">
+      <h1 className="garden-heading">Gardening Q&A</h1>
+      <div className="ai-chat-box">
+        <form onSubmit={handleSubmit}>
+          <label className="form-label">Ask your gardening question:</label>
           <textarea 
             name="question"
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
             placeholder="Enter your question..."
-            rows="3"
-            cols="50"
+            rows="4"
+            className="ai-chat-textarea"
           ></textarea>
-        </div>
-        <button type="submit">Submit Question</button>
-      </form>
-      {chatResponse && (
-        <div>
-          <h2>AI Response:</h2>
-          <p>{chatResponse}</p>
-        </div>
-      )}
-    </div>
+          <button type="submit" className="ai-chat-button">Submit Question</button>
+        </form>
+        {chatResponse && (
+          <div className="ai-chat-response">
+            <h2>AI Response:</h2>
+            <p>{chatResponse}</p>
+          </div>
+        )}
+      </div>
+    </Container>
   );
 };
 
