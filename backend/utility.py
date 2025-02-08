@@ -4,7 +4,7 @@ import boto3
 from config import Config
 import uuid
 
-def createLog(image: FileStorage | None, caption: str, user_id: int, conn: DB):
+def createLog(image: FileStorage | None, caption: str, stage: str | None, user_id: int, conn: DB):
     image_url = None
     image_uuid = None
     if image is not None:
@@ -24,10 +24,10 @@ def createLog(image: FileStorage | None, caption: str, user_id: int, conn: DB):
     created_id = conn.insert("""
         INSERT INTO
             logs
-        (user_id, caption, image_url, stage)
+        (user_id, caption, stage, image_url, stage)
         VALUES 
-        (%s, %s, %s, %s)
-    """, (user_id, caption, image_url, None))
+        (%s, %s, %s, %s, %s)
+    """, (user_id, caption, stage, image_url, None))
     if created_id is None:
         raise RuntimeError("inserting category in utility.createCategory didn't return a created row id")
     return created_id

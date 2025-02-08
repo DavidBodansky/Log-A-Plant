@@ -46,10 +46,11 @@ class API:
             caption = request.form.get('caption')
             if caption is None:
                 return Response.bad_request("This endpoint expects a caption!")
+            stage = request.form.get('stage')
             conn = DB()
             try:
                 image = request.files.get('image')
-                return Response.ok(utility.createLog(image, caption, user_id, conn))
+                return Response.ok(utility.createLog(image, caption, stage, user_id, conn))
             except Exception as e:
                 conn.close()
                 raise e
