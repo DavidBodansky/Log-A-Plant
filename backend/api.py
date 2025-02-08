@@ -3,6 +3,7 @@ from flask_restful import Resource
 from db.category import Category
 from response import Response
 import utility
+from modules.openAI import OpenAI
 
 class API:
     class Test(Resource):
@@ -25,3 +26,6 @@ class API:
             except Exception as e:
                 db.close()
                 raise e
+    class Ask(Resource):
+        def get(self):
+            return Response.ok(OpenAI.ask("good car companies"))

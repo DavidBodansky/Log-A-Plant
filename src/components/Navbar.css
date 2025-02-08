@@ -1,0 +1,47 @@
+.garden-navbar {
+    padding: 1rem;
+    color: #fff;
+    /* You can also add a fallback background color */
+    background-color: #4CAF50;
+  }
+  
+  .sidebar-toggler {
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  
+  .garden-search-group input {
+    border: none;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .garden-search-group .fa-search {
+    margin-top: 0.5rem;
+  }
+  
+  .garden-btn {
+    border-radius: 20px;
+  }
+  
+  .garden-user {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .garden-avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+  }
+  
+  .garden-user-name {
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .garden-dropdown-link {
+    color: #333;
+    text-decoration: none;
+  }
+  

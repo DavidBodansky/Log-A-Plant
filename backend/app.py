@@ -12,6 +12,7 @@ api = Api(app)
 api.add_resource(API.Test, '/test_connection')
 api.add_resource(API.NewCategory, '/user/<int:user_id>/new/category/<string:produce>')
 api.add_resource(API.GetCategory, '/user/<int:user_id>/get/category/<int:category_id>')
+api.add_resource(API.Ask, '/ask')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=Config.PORT, debug=Config.DEVELOPMENT)
