@@ -4,6 +4,16 @@
   GREEN NAVBAR 
   (Retained from the new snippet)
 */
+@font-face {
+    font-family: 'Frenstyle';
+    src: url('fonts/Frenstyle.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  body {
+    font-family: 'Frenstyle', sans-serif;
+  }
+  
 .garden-navbar {
     background-color: #4CAF50; /* A natural green color */
     padding: 1rem;
@@ -72,13 +82,16 @@
   
   /* Title & subheading styling */
   .garden-heading {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .garden-subheading {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 5rem !important; /* Increased size */
+    margin-bottom: 4rem;
+    position: absolute;
+    top: 250px;
+    left: 275px;
+    color: white; /* Ensures visibility on background */
+    -webkit-text-stroke: 0.1rem rgb(255, 255, 255); /* Adds a black stroke around the text */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+    font-family: 'Frenstyle', sans-serif;
   }
   
   /* 
@@ -99,6 +112,14 @@
     top: 200px;
     right: 200px;
     z-index: 50;
+  }
+
+  .tip-icon {
+    position: absolute;
+    top: -30px; /* Move it near the top */
+    right: -15px; /* Move it near the right side */
+    width: 70px; /* Size of the icon */
+    height: 70px; /* Size of the icon */
   }
   
   .garden-tip-box h3 {

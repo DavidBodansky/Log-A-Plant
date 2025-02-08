@@ -52,15 +52,6 @@ function App() {
           }
         />
         <Route
-          path="/milestones"
-          element={
-            <>
-              <Navbar />
-              <Milestones />
-            </>
-          }
-        />
-        <Route
           path="/profile"
           element={
             <>

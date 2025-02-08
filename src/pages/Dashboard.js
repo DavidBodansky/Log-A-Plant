@@ -76,9 +76,6 @@ const Dashboard = () => {
           <NavItem>
             <Link className="garden-nav-link" to="/recipes">Recipes</Link>
           </NavItem>
-          <NavItem>
-            <Link className="garden-nav-link" to="/milestones">Milestones</Link>
-          </NavItem>
         </Nav>
 
         {/* Right side: Profile dropdown */}
@@ -110,13 +107,17 @@ const Dashboard = () => {
 
       {/* Main dashboard content below the navbar */}
       <Container className="garden-dashboard-content mt-4">
-        <h1 className="garden-heading">Welcome to Your Garden Diary</h1>
-        <p className="garden-subheading">
-          Track your plant growth, log your daily progress, and enjoy sustainable gardening tips.
-        </p>
+        {/* Welcome Ares moved to top left */}
+        <h1 className="garden-heading">Welcome, Ares</h1>
         
         {/* Tip box with old styling (transparent box, absolute position, etc.) */}
         <div className="garden-tip-box">
+          {/* Lightbulb icon */}
+          <img 
+            src={require('../images/lightbulbTips.png')} 
+            alt="Tip Icon" 
+            className="tip-icon" 
+          />
           <h3>Today's Gardening Tip</h3>
           <p>{gardeningTip}</p>
         </div>
