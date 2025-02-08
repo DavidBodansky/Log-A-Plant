@@ -87,7 +87,7 @@ const Dashboard = () => {
                 alt="Gardener" 
                 className="rounded-circle garden-avatar" 
               />
-              <span className="garden-user-name">Gardener</span>
+              <span className="garden-user-name">Ares</span>
             </DropdownToggle>
             <DropdownMenu right>
               <DropdownItem>
@@ -108,7 +108,15 @@ const Dashboard = () => {
       {/* Main dashboard content below the navbar */}
       <Container className="garden-dashboard-content mt-4">
         {/* Welcome Ares moved to top left */}
-        <h1 className="garden-heading">Welcome, Ares</h1>
+        <div className="welcome-text">
+          <h1 className="garden-heading">Welcome, Ares</h1>
+          <p className="welcome-paragraph">
+            We're thrilled you're tending to your garden here. 
+            Log plant progress and learn about sustainable enviromental practices!
+            Feel free to explore recipes, chat with the AI for helpful advice, and
+            interact with others helping the enviroment as well. Happy gardening!
+          </p>
+        </div>
         
         {/* Tip box with old styling (transparent box, absolute position, etc.) */}
         <div className="garden-tip-box">

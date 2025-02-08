@@ -10,7 +10,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ padding: '20px', backgroundColor: '#2e2e2e' }}>
       <Routes>
         {/* 
           For the Dashboard route, 

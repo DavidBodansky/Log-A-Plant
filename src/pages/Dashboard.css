@@ -4,6 +4,15 @@
   GREEN NAVBAR 
   (Retained from the new snippet)
 */
+html, body {
+  margin: 0;
+  padding: 0;
+  /* 2) Set a background color so the entire page 
+        (outside the .garden-navbar or .garden-dashboard-content) 
+        is no longer white. Adjust to your chosen color. */
+  background-color: #2e2e2e; /* Example: dark gray or any other color */
+}
+
 @font-face {
     font-family: 'Frenstyle';
     src: url('fonts/Frenstyle.otf') format('opentype');
@@ -79,6 +88,15 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  .welcome-paragraph {
+    position: absolute;
+    top: 350px;    /* slightly below the heading’s top: 250px */
+    left: 276px;   /* place it further to the left than the heading */
+    width: 400px;  /* optional: fix a width */
+    color: white;  /* ensure it's visible against the background */
+    line-height: 1.6;
+  }
   
   /* Title & subheading styling */
   .garden-heading {
@@ -87,8 +105,8 @@
     position: absolute;
     top: 250px;
     left: 275px;
-    color: white; /* Ensures visibility on background */
-    -webkit-text-stroke: 0.1rem rgb(255, 255, 255); /* Adds a black stroke around the text */
+    color: white;
+    -webkit-text-stroke: 0.1rem rgb(255, 255, 255); 
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 
     font-family: 'Frenstyle', sans-serif;
