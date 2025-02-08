@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from datetime import datetime
+from typing import Union
 
 @dataclass
 class Category():
@@ -23,6 +24,6 @@ class Log():
     id: int
     user_id: int
     caption: str
-    image_url: str | None
-    stage: str | None
+    image_url: Union[str, None]
+    stage: Union[str, None]
     date_created: datetime
