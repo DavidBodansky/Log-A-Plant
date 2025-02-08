@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard';
 import DailyLog from './pages/DailyLog';
 import AIChat from './pages/AIChat';
 import Recipes from './pages/Recipes';
+import Profile from './pages/Profile';
 import Milestones from './pages/Milestones';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/ai-chat" element={<AIChat />} />
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/milestones" element={<Milestones />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </div>
