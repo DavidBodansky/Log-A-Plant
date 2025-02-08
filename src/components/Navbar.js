@@ -1,5 +1,6 @@
 // src/components/Navbar.js
 import React, { useState } from 'react';
+import pfpImage from '../images/pfp.png';
 import {
   Navbar as ReactstrapNavbar,
   Nav,
@@ -20,6 +21,7 @@ const Navbar = () => {
     console.log("Logout clicked");
     // Your logout logic here (e.g., clear tokens, redirect, etc.)
   };
+  
 
   return (
     <ReactstrapNavbar className="garden-navbar" expand="md">
@@ -47,7 +49,7 @@ const Navbar = () => {
         <Dropdown nav isOpen={dropdownOpen} toggle={toggleDropdown}>
           <DropdownToggle nav caret className="garden-user">
             <img
-              src="/images/garden_avatar.jpg"
+              src={pfpImage}
               alt="Gardener"
               className="rounded-circle garden-avatar"
             />
