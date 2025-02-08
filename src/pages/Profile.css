@@ -29,11 +29,13 @@
     width: 65%;
     .intro {
       h3 {
+        color: white;
         margin: 0;
         margin-left: 20px;
         font-size: 45px;
       }
       h1 {
+        color: white;
         margin: 0;
         margin-top: -10px;
         font-size: 80px;
@@ -43,7 +45,14 @@
       margin-top: 20px;
       margin-left: 5px;
       font-size: 16px;
-      color: #303030;
+      color: #c9c9c9;
     }
   }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto 0 auto;
+  gap: 25px;
+  width: 90%;
 }
