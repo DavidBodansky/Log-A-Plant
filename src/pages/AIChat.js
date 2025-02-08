@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import api from '../services/api';
+import DOMPurify from 'dompurify';
 import { Container } from 'reactstrap';
 import './AIChat.css';
 
@@ -17,7 +18,7 @@ const AIChat = () => {
           prompt: question
         }
       });
-      setChatResponse(res.data || 'No answer received.');
+      setChatResponse(DOMPurify.sanitize(res.data) || 'No answer received.');
       setQuestion('');
     } catch (error) {
       console.error('Error fetching AI response:', error);
@@ -55,7 +56,7 @@ const AIChat = () => {
         {chatResponse && (
           <div className="ai-chat-response">
             <h2>AI Response:</h2>
-            <p>{chatResponse}</p>
+            <p dangerouslySetInnerHTML={{__html: chatResponse}}></p>
           </div>
         )}
       </div>
