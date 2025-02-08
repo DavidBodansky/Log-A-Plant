@@ -1,47 +1,48 @@
+/* src/components/Navbar.css */
+
+/* Basic green background for your Navbar */
 .garden-navbar {
-    padding: 1rem;
-    color: #fff;
-    /* You can also add a fallback background color */
     background-color: #4CAF50;
+    border-radius: 8px;
+    padding: 10px 20px;
   }
   
-  .sidebar-toggler {
-    cursor: pointer;
-    margin-right: 1rem;
+  /* Basic link styling */
+  .garden-nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
   }
   
-  .garden-search-group input {
-    border: none;
-    border-radius: 4px 0 0 4px;
+  .garden-nav-link:hover {
+    color: #f0f0f0;
   }
   
-  .garden-search-group .fa-search {
-    margin-top: 0.5rem;
-  }
-  
-  .garden-btn {
-    border-radius: 20px;
-  }
-  
+  /* Profile dropdown style */
   .garden-user {
     display: flex;
     align-items: center;
-    cursor: pointer;
+    color: #fff;
   }
   
   .garden-avatar {
-    width: 40px;
-    height: 40px;
-    margin-right: 0.5rem;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
   }
   
   .garden-user-name {
-    color: #fff;
     font-weight: 600;
+    margin-left: 5px;
   }
   
   .garden-dropdown-link {
     color: #333;
     text-decoration: none;
+  }
+  
+  .garden-dropdown-link:hover {
+    color: #666;
   }
   

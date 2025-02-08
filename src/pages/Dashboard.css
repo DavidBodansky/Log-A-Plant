@@ -1,90 +1,28 @@
-/* Dashboard.css */
-
-.garden-navbar {
-    background-color: #4CAF50; /* A natural green color */
-    padding: 1rem;
+/* The wrapper that becomes your green rectangle */
+.garden-navbar-wrapper {
+    background-color: #4CAF50;     /* Green background */
+    border-radius: 8px;            /* Rounded corners; adjust as needed */
+    padding: 10px;                 /* Optional padding to space things out */
+    margin: 10px;                  /* Optional margin if you want spacing from page edges */
   }
   
-  .sidebar-toggler {
-    cursor: pointer;
-    margin-right: 1rem;
+  /* Make the actual Navbar transparent so the wrapper's color shows */
+  .garden-navbar {
+    background-color: transparent;
+    box-shadow: none;              /* Remove any default shadow from Reactstrap if desired */
   }
   
-  .garden-btn {
-    border-radius: 20px;
-  }
-  
+  /* Example styling for the dropdown user area, avatar, etc. */
   .garden-user {
+    color: #fff;
+    font-weight: bold;
     display: flex;
     align-items: center;
-    cursor: pointer;
   }
   
   .garden-avatar {
     width: 30px;
     height: 30px;
-    margin-right: 0.5rem;
-  }
-  
-  .garden-user-name {
-    color: #fff;
-    font-weight: 500;
-  }
-  
-  .garden-dropdown-link {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .garden-dashboard-content {
-    /* Adjust the background image path as needed.
-       If the image is in public/images, use an absolute path:
-       background: url('/images/garden_background.jpg') ... */
-    background: url('../images/garden_background.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 2rem;
-    border-radius: 8px;
-    color: #333;
-    min-height: 80vh;  /* Ensures the container takes up enough vertical space */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .dashboard-header {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .dashboard-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  
-  .welcome-message {
-    text-align: left;
-    flex: 1;
-  }
-  
-  .tip-of-day {
-    text-align: right;
-    flex: 1;
-  }
-  
-  .garden-heading {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .garden-subheading {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .garden-tip-box {
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 1.5rem;
-    border-radius: 6px;
+    margin-right: 8px;
   }
   
