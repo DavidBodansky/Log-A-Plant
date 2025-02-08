@@ -1,19 +1,34 @@
-/* Dashboard.css */
+/* src/components/Dashboard.css */
 
+/* 
+  GREEN NAVBAR 
+  (Retained from the new snippet)
+*/
 .garden-navbar {
     background-color: #4CAF50; /* A natural green color */
     padding: 1rem;
+    border-radius: 8px;
   }
   
+  /* Leaf icon on the left */
   .sidebar-toggler {
     cursor: pointer;
     margin-right: 1rem;
   }
   
-  .garden-btn {
-    border-radius: 20px;
+  /* Navbar links */
+  .garden-nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
   }
   
+  .garden-nav-link:hover {
+    color: #f0f0f0;
+  }
+  
+  /* Right side profile dropdown */
   .garden-user {
     display: flex;
     align-items: center;
@@ -36,42 +51,26 @@
     text-decoration: none;
   }
   
+  /* 
+    DASHBOARD CONTENT AREA 
+    (Merged from the old snippet) 
+  */
   .garden-dashboard-content {
-    /* Adjust the background image path as needed.
-       If the image is in public/images, use an absolute path:
-       background: url('/images/garden_background.jpg') ... */
+    /* You can use a background image if desired. 
+       Make sure the path is correct relative to your 'public' or 'src' folder. */
     background: url('../images/garden_background.jpg') no-repeat center center;
     background-size: cover;
+  
     padding: 2rem;
     border-radius: 8px;
     color: #333;
-    min-height: 80vh;  /* Ensures the container takes up enough vertical space */
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
   
-  .dashboard-header {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .dashboard-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  
-  .welcome-message {
-    text-align: left;
-    flex: 1;
-  }
-  
-  .tip-of-day {
-    text-align: right;
-    flex: 1;
-  }
-  
+  /* Title & subheading styling */
   .garden-heading {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -82,27 +81,33 @@
     margin-bottom: 2rem;
   }
   
+  /* 
+    TIP BOX (from old snippet) 
+    - Overlaid transparent box with shadow 
+  */
   .garden-tip-box {
-    background-color: rgba(255, 255, 255, 0.85); /* Light background with slight transparency */
-    padding: 2rem; /* Increased padding for a larger box */
-    border-radius: 15px; /* Rounded edges */
-    width: 300px; /* Slightly wider box */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 300px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    /* Position it where you want. 
+       The old snippet had absolute positioning (top & right).
+       Adjust these to place it as desired. */
     position: absolute;
-    top: 200px; /* Position closer to the center */
-    right: 200px; /* Position closer to the center */
-    z-index: 50; /* Ensure it's above other content */
-}
-
+    top: 200px;
+    right: 200px;
+    z-index: 50;
+  }
+  
   .garden-tip-box h3 {
-      font-size: 22px; /* Larger font size for the title */
-      margin-bottom: 15px; /* Increase space below the heading */
+    font-size: 22px;
+    margin-bottom: 15px;
   }
-
+  
   .garden-tip-box p {
-      font-size: 16px; /* Larger font size for the text */
-      line-height: 1.6; /* Slightly increased line height for readability */
+    font-size: 16px;
+    line-height: 1.6;
   }
-
-
   

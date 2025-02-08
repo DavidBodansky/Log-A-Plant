@@ -1,3 +1,4 @@
+// src/components/Dashboard.js
 import React, { useState, useEffect } from 'react';
 import pfpImage from '../images/pfp.png';
 import { 
@@ -10,7 +11,7 @@ import {
   DropdownMenu, 
   DropdownItem 
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -37,34 +38,50 @@ const Dashboard = () => {
     "Incorporate flowers into your garden to attract pollinators like bees and butterflies.",
     "Be patient with plant growth; gardening takes time and care.",
     "Water deeply and less frequently to encourage strong root systems.",
-    "Test your soil regularly to ensure the right pH and nutrient levels for your plants.",
+    "Test your soil regularly to ensure the right pH and nutrient levels.",
     "Consider growing drought-tolerant plants to save water in the garden."
   ];
 
-  // Randomly select a gardening tip
+  // Randomly select a gardening tip on mount
   useEffect(() => {
     const randomTip = gardeningTips[Math.floor(Math.random() * gardeningTips.length)];
     setGardeningTip(randomTip);
-  }, []); // The empty dependency array ensures this runs once when the component mounts
+  }, []);
 
-  const toggleDropdown = () => setDropdownOpen(prevState => !prevState);
+  const toggleDropdown = () => setDropdownOpen(prev => !prev);
 
-  // Event Handlers
   const handleLogout = () => {
     console.log("Logout clicked");
-    // You can add logout logic here (e.g., clearing tokens, redirecting, etc.)
+    // Add logout logic (e.g. clearing tokens, redirecting) here
   };
 
   return (
     <div>
-      {/* Garden-themed Header */}
+      {/* Navbar at the top, styled as a green rectangle */}
       <Navbar className="garden-navbar" expand="md">
+        {/* Left side: Leaf icon + main nav links */}
         <Nav className="mr-auto" navbar>
-          <NavItem className="sidebar-toggler" onClick={() => { /* Optionally toggle sidebar */ }}>
+          <NavItem className="sidebar-toggler" onClick={() => { /* Optional sidebar toggle */ }}>
             <i className="fa fa-leaf fa-2x text-white" />
           </NavItem>
-          {/* Removed search field */}
+          <NavItem>
+            <Link className="garden-nav-link" to="/">Dashboard</Link>
+          </NavItem>
+          <NavItem>
+            <Link className="garden-nav-link" to="/daily-log">Daily Log</Link>
+          </NavItem>
+          <NavItem>
+            <Link className="garden-nav-link" to="/ai-chat">Gardening Q&A</Link>
+          </NavItem>
+          <NavItem>
+            <Link className="garden-nav-link" to="/recipes">Recipes</Link>
+          </NavItem>
+          <NavItem>
+            <Link className="garden-nav-link" to="/milestones">Milestones</Link>
+          </NavItem>
         </Nav>
+
+        {/* Right side: Profile dropdown */}
         <Nav className="ml-auto" navbar>
           <Dropdown nav isOpen={dropdownOpen} toggle={toggleDropdown}>
             <DropdownToggle nav caret className="garden-user">
@@ -91,12 +108,14 @@ const Dashboard = () => {
         </Nav>
       </Navbar>
 
-      {/* Garden-themed Content Area */}
+      {/* Main dashboard content below the navbar */}
       <Container className="garden-dashboard-content mt-4">
         <h1 className="garden-heading">Welcome to Your Garden Diary</h1>
         <p className="garden-subheading">
           Track your plant growth, log your daily progress, and enjoy sustainable gardening tips.
         </p>
+        
+        {/* Tip box with old styling (transparent box, absolute position, etc.) */}
         <div className="garden-tip-box">
           <h3>Today's Gardening Tip</h3>
           <p>{gardeningTip}</p>
