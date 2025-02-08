@@ -11,10 +11,10 @@ api = Api(app)
 # Server Routing
 api.add_resource(API.Test, '/test_connection')
 api.add_resource(API.NewCategory, '/user/<int:user_id>/new/category/<string:produce>')
-api.add_resource(API.GetCategory, '/user/<int:user_id>/get/category/<int:category_id>')
-api.add_resource(API.GetCategories, '/user/<int:user_id>/get/categories')
+api.add_resource(API.GetCategory, '/user/<int:user_id>/category/<int:category_id>')
+api.add_resource(API.GetCategories, '/user/<int:user_id>/categories')
 api.add_resource(API.NewLog, '/user/<int:user_id>/new/log')
-api.add_resource(API.GetLogs, '/user/<int:user_id>/get/logs')
+api.add_resource(API.GetLogs, '/user/<int:user_id>/logs')
 api.add_resource(API.Ask, '/ask')
 
 if __name__ == '__main__':
