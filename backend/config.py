@@ -17,4 +17,7 @@ class Config:
     AWS_KEY = os.getenv("AWS_KEY")
     AWS_SECRET = os.getenv("AWS_SECRET")
     AWS_REGION = os.getenv("AWS_REGION")
+    UNSPLASH_ACCESS = os.getenv("UNSPLASH_ACCESS")
+    UNSPLASH_SECRET = os.getenv("UNSPLASH_SECRET")
+    SPOONACULAR_ACCESS = os.getenv("SPOONACULAR_ACCESS")
 
