@@ -1,16 +1,17 @@
 .container {
-    background: url('../images/garden_background.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 2rem;
-    border-radius: 8px;
-    color: #000000;
-    min-height: 80vh;
-  }
+  margin-top: 24px;
+  background: url('../images/garden_background.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 2rem;
+  border-radius: 8px;
+  color: #000000;
+  min-height: 80vh;
+}
 .user-info {
   width: 100%;
   min-height: 400px;
   display: flex;
-  
+
   .left {
     flex: 5; 
     width: 35%;
