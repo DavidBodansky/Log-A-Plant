@@ -4,6 +4,16 @@
   GREEN NAVBAR 
   (Retained from the new snippet)
 */
+@font-face {
+    font-family: 'Frenstyle';
+    src: url('fonts/Frenstyle.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  body {
+    font-family: 'Frenstyle', sans-serif;
+  }
+  
 .garden-navbar {
     background-color: #4CAF50; /* A natural green color */
     padding: 1rem;
@@ -77,9 +87,11 @@
     position: absolute;
     top: 250px;
     left: 275px;
-    color: black; /* Ensures visibility on background */
-    -webkit-text-stroke: 0.1rem rgb(0, 0, 0); /* Adds a black stroke around the text */
+    color: white; /* Ensures visibility on background */
+    -webkit-text-stroke: 0.1rem rgb(255, 255, 255); /* Adds a black stroke around the text */
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+    font-family: 'Frenstyle', sans-serif;
   }
   
   /* 
