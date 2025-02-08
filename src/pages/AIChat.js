@@ -7,9 +7,11 @@ const AIChat = () => {
   const [question, setQuestion] = useState('');
   const [chatResponse, setChatResponse] = useState('');
 
+  // Event handler for form submission (sending the question)
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Call your Flask endpoint for AI Q&A.
       const res = await api.post('/ai/qa', { question });
       setChatResponse(res.data.answer || 'No answer received.');
       setQuestion('');
@@ -17,6 +19,12 @@ const AIChat = () => {
       console.error('Error fetching AI response:', error);
       setChatResponse('Error fetching AI response.');
     }
+  };
+
+  // Event handler to clear the chat question and response
+  const handleClear = () => {
+    setQuestion('');
+    setChatResponse('');
   };
 
   return (
@@ -33,7 +41,12 @@ const AIChat = () => {
             rows="4"
             className="ai-chat-textarea"
           ></textarea>
-          <button type="submit" className="ai-chat-button">Submit Question</button>
+          <div className="ai-chat-buttons">
+            <button type="submit" className="ai-chat-button">Submit Question</button>
+            <button type="button" className="ai-chat-button clear-button" onClick={handleClear}>
+              Clear
+            </button>
+          </div>
         </form>
         {chatResponse && (
           <div className="ai-chat-response">

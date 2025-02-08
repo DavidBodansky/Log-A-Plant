@@ -11,7 +11,7 @@ import {
   DropdownItem 
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import './Dashboard.css';  // Custom CSS for garden-themed styling
+import './Dashboard.css';
 
 const Dashboard = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -20,24 +20,47 @@ const Dashboard = () => {
   // Static gardening tip
   const gardeningTip = "Water your plants early in the morning for optimal absorption and healthy growth!";
 
+  // Event Handlers
+  const handleNewEntry = () => {
+    // For example, navigate to a new entry form or open a modal
+    console.log("New Entry button clicked");
+  };
+
+  const handlePlantInfo = () => {
+    console.log("Plant Info button clicked");
+  };
+
+  const handleLogout = () => {
+    console.log("Logout clicked");
+    // You can add logout logic here (e.g., clearing tokens, redirecting, etc.)
+  };
+
   return (
     <div>
       {/* Garden-themed Header */}
       <Navbar className="garden-navbar" expand="md">
         <Nav className="mr-auto" navbar>
-          <NavItem className="sidebar-toggler" onClick={() => {/* Optionally toggle sidebar */}}>
+          <NavItem className="sidebar-toggler" onClick={() => { /* Optionally toggle sidebar */ }}>
             <i className="fa fa-leaf fa-2x text-white" />
           </NavItem>
           {/* Removed search field */}
         </Nav>
         <Nav className="ml-auto" navbar>
           <NavItem className="mx-2">
-            <Button color="success" className="garden-btn">
+            <Button 
+              color="success" 
+              className="garden-btn" 
+              onClick={handleNewEntry}
+            >
               <i className="fa fa-plus" /> New Entry
             </Button>
           </NavItem>
           <NavItem className="mx-2">
-            <Button color="warning" className="garden-btn">
+            <Button 
+              color="warning" 
+              className="garden-btn" 
+              onClick={handlePlantInfo}
+            >
               <i className="fa fa-tree" /> Plant Info
             </Button>
           </NavItem>
@@ -58,7 +81,7 @@ const Dashboard = () => {
                 <NavLink to="/settings" className="garden-dropdown-link">Settings</NavLink>
               </DropdownItem>
               <DropdownItem divider />
-              <DropdownItem onClick={() => {/* handle logout */}}>
+              <DropdownItem onClick={handleLogout}>
                 Logout
               </DropdownItem>
             </DropdownMenu>
