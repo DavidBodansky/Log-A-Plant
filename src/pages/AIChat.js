@@ -12,7 +12,11 @@ const AIChat = () => {
     e.preventDefault();
     try {
       // Call your Flask endpoint for AI Q&A.
-      const res = await api.get('/ask', { prompt: question });
+      const res = await api.get('/ask', {
+        params: {
+          prompt: question
+        }
+      });
       setChatResponse(res.data || 'No answer received.');
       setQuestion('');
     } catch (error) {
