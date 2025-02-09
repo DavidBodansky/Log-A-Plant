@@ -63,7 +63,7 @@ const Recipes = () => {
             ))}
           </ul>
         ) : (
-          <p>No recipes available yet. Log your harvest to see suggestions!</p>
+          <p>Loading...</p>
         )}
       </div>
     </div>
