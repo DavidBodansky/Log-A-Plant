@@ -2,10 +2,10 @@
 
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
-[![React](https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB)](https://react.dev/)
-[![Tailwind-CSS](https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC.svg?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=fff)](https://www.mysql.com/)
-[![OpenAI](https://img.shields.io/badge/AWS-%23FF9900.svg?logo=amazon-web-services&logoColor=white)](https://openai.com/)
+[![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
+[![Tailwind-CSS](https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=fff)](https://www.mysql.com/)
+[![OpenAI](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-web-services&logoColor=white)](https://openai.com/)
 
 </div>
 
@@ -23,7 +23,7 @@ The perfect learning and journalling platform for gardeners! This project was bu
     ```
 2. Ensure you have Python installed
    - While this step is dependent on your OS, you can check if it exists by typing: ```python3 --version``` or ```python --version```
-   - If Python is not installed, you can view the installation at <a>https://www.python.org/downloads/</a>
+   - If Python is not installed, you can view the installation process at <a>https://www.python.org/downloads/</a>
 
 3. Create a virtual environment and activate it:
     ```sh
@@ -31,79 +31,39 @@ The perfect learning and journalling platform for gardeners! This project was bu
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     ```
 
-    While this step is not required, it is recomended for lower dependency conflicts.
+    While this step is not required, it is recomended for less dependency conflicts.
     
-4. Install the required packages:
-    If you are not already in the backend directory, cd into the backend folder:
+4. Install the required npm packages:
     ```sh
-    backend
+    npm install
     ```
-    
-    When its ensured that you're within the backend directory, install the requirements.txt file using the following command: 
+5. Install the required pip packages:
     ```sh
+    cd backend
     pip install -r requirements.txt
     ```
+6. Setup your database environment
+   a. While it may not be required to run it on this version, this repo is only verified to work on the MySQL Community 8.0.40 version
+   b. Upload the sql dump 'dump.sql' from the repo onto your database
+   c. Ensure the standard 3306 port is properly configured and open
+7. Configure your .env
+   a. Copy the .base-env into .env, and populate all the fields with the requested data
+   ```sh
+   cp .base-env .env
+   ```
 
 ## Running the Application
-After ensuring you have cloned the repo and have python installed, cd into the backend folder and download the required packages.
-
-To run the Flask application, make sure you are still within the backend folder and execute the `app.py` script. This will start a local flask server where you can interact with the RDS database and AI integration.
-
+To run the back-end application, execute the `app.py` file within the backend folder. This will start a local flask server where you can interact with the MySQL and OpenAI integration.
 ```sh
+cd backend
 python app.py
 ```
-
-After doing so, you can open another terminal. If you are still within the backend folder run cd ..
-
-Make sure if you have not done so to run the npm install command
-
-```sh
-npm install
-```
-
-After doing so you may run npm start to start the local web application
-
+After doing so, you'll want to run the front-end application into another shell instance, by running the `npm start` script
 ```sh
 npm start
 ```
-
-
+So long as the .env is properly configured, the front-end should be interactable with your back-end application.
 
 ## Endpoints
 
 - `/` - Main menu
-
-
-
-## .env dependency
-
-Our program uses a group of API's that are dependent on private keys.
-
-We rely on private keys that are gathered and inputted into the .env file within the backend directory.
-The .env file structure is as follows :
-
-ALLOWED_ORIGINS=""
-
-SECRET_KEY=""
-OPENAI_API_KEY=""
-
-DEVELOPMENT=""
-
-PORT=""
-
-DB_HOST=""
-DB_USER=""
-DB_PASS=""
-DB_SCHEMA=""
-
-AWS_KEY=""
-AWS_SECRET=""
-AWS_REGION=""
-
-UNSPLASH_ACCESS=""
-UNSPLASH_KEY=""
-
-SPOONACULAR_ACCESS=""
-
-You must develop the cooresponding API keys for OpenAI, AWS RDS and SPOONIFY
-
