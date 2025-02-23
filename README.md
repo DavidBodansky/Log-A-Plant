@@ -10,7 +10,7 @@
 </div>
 
 # log-A-plant
-The perfect learning and journalling platform for gardeners! This project was built to push environmentally friendly and sustainable practices to novice and veteran gardeners. We accomplished such learning platform because of our openAI integration, giving gardeners tailored answers to any sustainability question, and unique plant-based recipes to the very plants they've harvested!
+The perfect learning and journalling platform for gardeners! This project was built to push environmentally friendly and sustainable practices to novice and veteran gardeners. Gardeners can log their plants progress, get AI-generated, tailored responses to any sustainability question from our openAI API integration, and get unique plant-based recipes to the very plants they've harvested!
 
 - <a target="_blank" href="https://devpost.com/software/log-a-plant">SparkHacks Devpost</a>
 - <a target="_blank" href="https://youtu.be/PCS7RNPUsiU?si=bgCWPWpDD9DA39-Z">Demo video</a>
